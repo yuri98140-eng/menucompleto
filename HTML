@@ -1,0 +1,31 @@
+<!-- Estrutura HTML da NUI -->
+<div class="menu-container">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <button class="tab-btn active" onclick="switchTab('jogador')">
+      <img src="https://raw.githubusercontent.com/yuri98140-eng/user1/main/tab-anim.svg" class="tab-indicator">
+      Jogador
+    </button>
+    <button class="tab-btn" onclick="switchTab('veiculos')">Veículos</button>
+  </div>
+
+  <!-- Conteúdo das Abas -->
+  <div id="tab-jogador" class="tab-content active">
+    <h3>Opções do Jogador</h3>
+    <!-- Itens da aba jogador -->
+  </div>
+
+  <div id="tab-veiculos" class="tab-content">
+    <h3>Opções de Veículos</h3>
+    <!-- Itens da aba veículos -->
+  </div>
+</div>
+
+<script>
+  function switchTab(tabName) {
+    // Esconde todas as abas
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    // Mostra apenas a aba clicada
+    document.getElementById('tab-' + tabName).classList.add('active');
+  }
+</script>
