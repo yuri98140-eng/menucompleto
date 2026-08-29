@@ -7,7 +7,7 @@
 }
 
 body {
-  background: transparent;
+  background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,49 +15,50 @@ body {
   overflow: hidden;
 }
 
+/* CONTAINER PRINCIPAL DO MENU STORM */
 .menu-container {
-  width: 850px;
-  height: 600px;
-  background-color: #12141d;
-  border-radius: 16px;
+  width: 820px;
+  height: 580px;
+  background-color: #11141e;
+  border-radius: 12px;
   display: flex;
-  padding: 18px;
-  gap: 20px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-  border: 1px solid #1a1e2b;
+  padding: 16px;
+  gap: 16px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+  border: 1px solid #1a1e2d;
 }
 
 /* SIDEBAR */
 .sidebar {
-  width: 200px;
+  width: 190px;
   display: flex;
   flex-direction: column;
 }
 
 .logo {
-  font-size: 26px;
-  font-weight: 900;
+  font-size: 24px;
+  font-weight: 800;
   color: #ffffff;
   letter-spacing: 2px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
+  margin-bottom: 18px;
+  padding-left: 4px;
 }
 
-.logo .bolt {
+.logo .lightning {
   color: #3b82f6;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .menu-group {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .category-title {
-  color: #6c7385;
+  color: #585e72;
   font-size: 11px;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  padding-left: 4px;
 }
 
 .nav-btn {
@@ -65,47 +66,43 @@ body {
   position: relative;
   background: transparent;
   border: none;
-  color: #8c93a4;
-  padding: 8px 12px 8px 16px;
+  color: #72798e;
+  padding: 7px 10px 7px 16px;
   text-align: left;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 6px;
   margin-bottom: 2px;
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 
-.nav-btn .icon {
-  width: 16px;
-  height: 16px;
-  opacity: 0.7;
+.nav-btn .nav-icon {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
 }
 
-.nav-btn .tab-indicator {
+.nav-btn .pill {
   position: absolute;
   left: 0;
   width: 4px;
-  height: 18px;
+  height: 16px;
   background-color: #ffffff;
   border-radius: 0 4px 4px 0;
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s ease;
 }
 
 .nav-btn.active {
-  background-color: #1a1e2b;
+  background-color: #1a1f2e;
   color: #ffffff;
 }
 
-.nav-btn.active .icon {
-  opacity: 1;
-}
-
-.nav-btn.active .tab-indicator {
+.nav-btn.active .pill {
   opacity: 1;
 }
 
@@ -117,11 +114,11 @@ body {
   padding-top: 10px;
 }
 
-.avatar {
-  width: 34px;
-  height: 34px;
+.avatar-placeholder {
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  object-fit: cover;
+  background-color: #272d3f;
 }
 
 .user-info {
@@ -136,7 +133,7 @@ body {
 }
 
 .role {
-  color: #6c7385;
+  color: #585e72;
   font-size: 11px;
 }
 
@@ -151,58 +148,57 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .subtabs-bar {
-  background-color: #171a26;
-  padding: 4px;
-  border-radius: 10px;
+  background-color: #161925;
+  padding: 3px;
+  border-radius: 8px;
   display: flex;
-  gap: 4px;
-  border: 1px solid #1f2434;
+  gap: 2px;
+  border: 1px solid #1c2132;
 }
 
 .subtab-btn {
   background: transparent;
   border: none;
-  color: #6c7385;
-  padding: 6px 16px;
+  color: #585e72;
+  padding: 5px 14px;
   font-size: 12px;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 6px;
-  transition: all 0.2s;
 }
 
-.subtab-btn .icon {
-  width: 14px;
-  height: 14px;
+.subtab-btn .subtab-icon {
+  width: 13px;
+  height: 13px;
 }
 
 .subtab-btn.active {
-  background-color: #242a3b;
+  background-color: #202638;
   color: #ffffff;
 }
 
 .search-box {
-  background-color: #171a26;
-  border: 1px solid #1f2434;
-  border-radius: 10px;
-  padding: 6px 12px;
+  background-color: #161925;
+  border: 1px solid #1c2132;
+  border-radius: 8px;
+  padding: 5px 10px;
   display: flex;
   align-items: center;
   gap: 8px;
-  width: 150px;
+  width: 140px;
 }
 
 .search-icon {
-  width: 14px;
-  height: 14px;
-  color: #6c7385;
+  width: 13px;
+  height: 13px;
+  color: #585e72;
 }
 
 .search-box input {
@@ -214,16 +210,20 @@ body {
   width: 100%;
 }
 
-/* CARDS & TAB CONTENTS */
+.search-box input::placeholder {
+  color: #585e72;
+}
+
+/* CARDS NO STYLE DO FIGMA */
 .cards-wrapper {
   flex: 1;
-  position: relative;
+  display: flex;
 }
 
 .tab-page {
   display: none;
-  gap: 16px;
-  height: 100%;
+  gap: 14px;
+  width: 100%;
 }
 
 .tab-page.active {
@@ -232,10 +232,10 @@ body {
 
 .card {
   flex: 1;
-  background-color: #171a26;
-  border: 1px solid #1f2434;
-  border-radius: 14px;
-  padding: 16px;
+  background-color: #161925;
+  border: 1px solid #1c2132;
+  border-radius: 10px;
+  padding: 14px 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -245,64 +245,49 @@ body {
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
 }
 
 .form-group label {
-  color: #555d70;
+  color: #4a5063;
   font-size: 12px;
   margin-bottom: 4px;
   display: block;
 }
 
-.select-box {
-  background-color: #12141d;
-  border: 1px solid #1f2434;
-  border-radius: 8px;
-  padding: 8px 12px;
-  color: #555d70;
+.combo-box {
+  background-color: #11141e;
+  border: 1px solid #1c2132;
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: #4a5063;
   font-size: 12px;
 }
 
-.list-item {
-  color: #555d70;
+.option-line {
+  color: #4a5063;
   font-size: 12px;
   font-weight: 500;
-  padding: 4px 0;
+  padding: 2px 0;
 }
 
-.list-item.row {
+.option-line.row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.list-item.clickable {
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.list-item.clickable:hover {
-  color: #8c93a4;
-}
-
-.color-dot {
+.color-picker-dot {
   width: 12px;
   height: 12px;
   background-color: #ffffff;
   border-radius: 50%;
 }
 
-.custom-checkbox {
-  appearance: none;
-  width: 14px;
-  height: 14px;
-  background-color: #12141d;
-  border: 1px solid #1f2434;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.custom-checkbox:checked {
-  background-color: #3b82f6;
+.checkbox-box {
+  width: 12px;
+  height: 12px;
+  background-color: #11141e;
+  border: 1px solid #1c2132;
+  border-radius: 3px;
 }
