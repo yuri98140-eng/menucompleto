@@ -6,29 +6,13 @@
   user-select: none;
 }
 
-html, body {
-  background: #ffffff !important;
-  background-color: #ffffff !important;
+body {
+  background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
   overflow: hidden;
-}
-
-/* CURSOR VIRTUAL PARA NAVEGAÇÃO DUI */
-#virtual-cursor {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background-color: #ffffff;
-  border: 2px solid #3b82f6;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 8px rgba(59, 130, 246, 0.8);
 }
 
 /* CONTAINER PRINCIPAL DO MENU STORM */
@@ -185,6 +169,14 @@ html, body {
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.subtab-btn .subtab-icon {
+  width: 13px;
+  height: 13px;
 }
 
 .subtab-btn.active {
@@ -199,7 +191,14 @@ html, body {
   padding: 5px 10px;
   display: flex;
   align-items: center;
+  gap: 8px;
   width: 140px;
+}
+
+.search-icon {
+  width: 13px;
+  height: 13px;
+  color: #585e72;
 }
 
 .search-box input {
@@ -211,6 +210,11 @@ html, body {
   width: 100%;
 }
 
+.search-box input::placeholder {
+  color: #585e72;
+}
+
+/* CARDS NO STYLE DO FIGMA */
 .cards-wrapper {
   flex: 1;
   display: flex;
@@ -244,19 +248,46 @@ html, body {
   margin-bottom: 2px;
 }
 
+.form-group label {
+  color: #4a5063;
+  font-size: 12px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.combo-box {
+  background-color: #11141e;
+  border: 1px solid #1c2132;
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: #4a5063;
+  font-size: 12px;
+}
+
 .option-line {
   color: #4a5063;
   font-size: 12px;
   font-weight: 500;
-  padding: 4px 6px;
-  border-radius: 4px;
+  padding: 2px 0;
 }
 
-.option-line.clickable {
-  cursor: pointer;
+.option-line.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.option-line.clickable:hover {
-  background-color: #1f2536;
-  color: #ffffff;
+.color-picker-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.checkbox-box {
+  width: 12px;
+  height: 12px;
+  background-color: #11141e;
+  border: 1px solid #1c2132;
+  border-radius: 3px;
 }
