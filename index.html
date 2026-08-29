@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Storm Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="menu-container">
+    <aside class="sidebar">
+      <div class="logo">ST<span>⚡</span>RM</div>
+
+      <div class="category-title">• Opções Gerais</div>
+      <button class="nav-btn active" onclick="switchTab('jogador')">
+        <svg class="tab-indicator" width="6" height="24" viewBox="0 0 6 24" fill="none">
+          <path d="M0 0H3C4.65685 0 6 1.34315 6 3V21C6 22.6569 4.65685 24 3 24H0V0Z" fill="#FFFFFF"/>
+        </svg>
+        <span class="icon">👤</span> Jogador
+      </button>
+
+      <button class="nav-btn" onclick="switchTab('veiculos')">
+        <svg class="tab-indicator" width="6" height="24" viewBox="0 0 6 24" fill="none">
+          <path d="M0 0H3C4.65685 0 6 1.34315 6 3V21C6 22.6569 4.65685 24 3 24H0V0Z" fill="#FFFFFF"/>
+        </svg>
+        <span class="icon">🚗</span> Veículos
+      </button>
+
+      <button class="nav-btn" onclick="switchTab('armas')">
+        <svg class="tab-indicator" width="6" height="24" viewBox="0 0 6 24" fill="none">
+          <path d="M0 0H3C4.65685 0 6 1.34315 6 3V21C6 22.6569 4.65685 24 3 24H0V0Z" fill="#FFFFFF"/>
+        </svg>
+        <span class="icon">🔫</span> Armas
+      </button>
+
+      <div class="category-title">• Opções do Servidor</div>
+      <button class="nav-btn" onclick="switchTab('online')">
+        <svg class="tab-indicator" width="6" height="24" viewBox="0 0 6 24" fill="none">
+          <path d="M0 0H3C4.65685 0 6 1.34315 6 3V21C6 22.6569 4.65685 24 3 24H0V0Z" fill="#FFFFFF"/>
+        </svg>
+        <span class="icon">🌐</span> Online
+      </button>
+
+      <div class="user-profile">
+        <div class="avatar"></div>
+        <div class="user-info">
+          <span class="username">duck.lua</span>
+          <span class="role">Master Dev</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="subtabs">
+          <button class="subtab-btn active">Subtab</button>
+          <button class="subtab-btn">Subtab 2</button>
+          <button class="subtab-btn">Subtab 3</button>
+        </div>
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Pesquisar...">
+        </div>
+      </header>
+
+      <div class="cards-wrapper">
+        
+        <div id="tab-jogador" class="tab-page active">
+          <div class="card">
+            <h3>Opções Gerais</h3>
+            <div class="form-group">
+              <label>Exemple Combo:</label>
+              <select><option>Opção: Menu</option></select>
+            </div>
+            <div class="form-group row">
+              <span>Reviver Ao Morrer</span>
+              <input type="checkbox">
+            </div>
+            <button class="action-btn">Reviver</button>
+            <button class="action-btn">Suicídio</button>
+            <button class="action-btn">Limpar ferimentos</button>
+          </div>
+
+          <div class="card">
+            <h3>Movimentação</h3>
+            <div class="form-group">
+              <label>Velocidade:</label>
+              <select><option>Padrão</option></select>
+            </div>
+            <button class="action-btn">Super Pulo</button>
+            <button class="action-btn">Noclip</button>
+          </div>
+        </div>
+
+        <div id="tab-veiculos" class="tab-page">
+          <div class="card">
+            <h3>Gerenciar Veículo</h3>
+            <button class="action-btn">Reparar Veículo</button>
+            <button class="action-btn">Tunar Máximo</button>
+            <button class="action-btn">Limpar Veículo</button>
+          </div>
+        </div>
+
+        <div id="tab-armas" class="tab-page">
+          <div class="card">
+            <h3>Opções de Armas</h3>
+            <button class="action-btn">Dar Todas as Armas</button>
+            <button class="action-btn">Munição Infinita</button>
+          </div>
+        </div>
+
+        <div id="tab-online" class="tab-page">
+          <div class="card">
+            <h3>Jogadores Online</h3>
+            <p style="color:#6B7280; font-size:12px;">Lista de jogadores carregando...</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
