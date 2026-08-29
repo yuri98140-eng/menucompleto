@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  user-select: none;
+}
+
+body {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.menu-container {
+  width: 800px;
+  height: 600px;
+  background-color: #111319;
+  border-radius: 12px;
+  display: flex;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 1px solid #1E2330;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 190px;
+  background-color: #111319;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #171A21;
+}
+
+.logo {
+  color: #FFF;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 2px;
+  padding: 0 10px 20px 10px;
+}
+.logo span { color: #3B82F6; }
+
+.category-title {
+  color: #6B7280;
+  font-size: 11px;
+  font-weight: 700;
+  margin: 15px 0 8px 10px;
+}
+
+.nav-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: #9CA3AF;
+  padding: 8px 12px 8px 30px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.nav-btn .tab-indicator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.nav-btn.active {
+  background-color: #1E2330;
+  color: #FFFFFF;
+}
+
+.nav-btn.active .tab-indicator {
+  opacity: 1;
+}
+
+.user-profile {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #374151;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.username { color: #FFF; font-size: 12px; font-weight: 700; }
+.role { color: #9CA3AF; font-size: 10px; }
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.subtabs {
+  background: #171A21;
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  gap: 4px;
+}
+
+.subtab-btn {
+  background: transparent;
+  border: none;
+  color: #6B7280;
+  padding: 6px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.subtab-btn.active {
+  background: #222734;
+  color: #FFF;
+}
+
+.search-box {
+  background: #171A21;
+  border-radius: 6px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #FFF;
+  font-size: 11px;
+  width: 100px;
+}
+
+/* CARDS E ABAS */
+.cards-wrapper { flex: 1; position: relative; }
+
+.tab-page {
+  display: none;
+  gap: 15px;
+  height: 100%;
+}
+
+.tab-page.active {
+  display: flex;
+}
+
+.card {
+  flex: 1;
+  background: #171A23;
+  border: 1px solid #222734;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card h3 {
+  color: #FFF;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-group.row {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #9CA3AF;
+  font-size: 12px;
+}
+
+.form-group label {
+  color: #6B7280;
+  font-size: 11px;
+}
+
+select {
+  background: #101217;
+  border: 1px solid #222734;
+  color: #9CA3AF;
+  padding: 6px 10px;
+  border-radius: 4px;
+  outline: none;
+}
+
+.action-btn {
+  background: #101217;
+  border: 1px solid #222734;
+  color: #9CA3AF;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.action-btn:hover {
+  background: #222734;
+  color: #FFF;
+}
