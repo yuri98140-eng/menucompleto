@@ -1,0 +1,17 @@
+.tab-btn {
+  position: relative;
+  transition: background 0.2s;
+}
+
+/* O indicador de aba desliza ou aparece suavemente */
+.tab-btn .tab-indicator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.tab-btn.active .tab-indicator {
+  display: block;
+}
